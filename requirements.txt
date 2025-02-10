@@ -1,2 +1,4 @@
 psutil
 plyer
+pystray
+flet
