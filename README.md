@@ -8,6 +8,8 @@ Un monitor de recursos del sistema en tiempo real para identificar procesos que 
 
 Este programa es una herramienta de monitoreo de sistema que te ayuda a identificar qué procesos están consumiendo demasiados recursos (CPU y memoria) en tu computadora. Es especialmente útil cuando tu sistema se vuelve lento y necesitas encontrar rápidamente el culpable.
 
+![about-quiensecome](https://github.com/user-attachments/assets/34415df1-b17e-4fe0-a417-46edeaa18fb4)
+
 ### ¿Para qué sirve?
 
 - **Detectar procesos problemáticos**: Identifica automáticamente procesos que superan umbrales de CPU y memoria
