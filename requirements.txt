@@ -1,0 +1,6 @@
+plyer
+psutil
+tk
+pystray
+pillow
+dbus-python
