@@ -8,6 +8,7 @@ from PIL import Image, ImageDraw
 from plyer import notification
 from ventana_alertas import VentanaAlertas
 from ventana_todos_procesos import VentanaTodosProcesos
+from ventana_about import mostrar_about
 
 # Umbrales por defecto
 DEFAULT_CPU = 50
@@ -54,6 +55,11 @@ class MonitorRecursosApp:
         archivo_menu = tk.Menu(menubar, tearoff=0)
         archivo_menu.add_command(label="Salir", command=self.exit_app)
         menubar.add_cascade(label="Archivo", menu=archivo_menu)
+        
+        opciones_menu = tk.Menu(menubar, tearoff=0)
+        opciones_menu.add_command(label="About...", command=self.show_about)
+        menubar.add_cascade(label="Opciones", menu=opciones_menu)
+        
         self.root.config(menu=menubar)
 
     def setup_ui(self):
@@ -236,6 +242,10 @@ class MonitorRecursosApp:
         except Exception:
             pass
         self.root.destroy()
+
+    def show_about(self):
+        """Muestra la ventana About"""
+        mostrar_about(self.root)
 
 if __name__ == "__main__":
     root = tk.Tk()

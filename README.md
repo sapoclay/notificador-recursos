@@ -103,6 +103,7 @@ recursos/
 ├── run_app.py                  # Script de instalación y ejecución
 ├── ventana_alertas.py          # Pestaña de procesos en alerta
 ├── ventana_todos_procesos.py   # Pestaña de todos los procesos
+├── ventana_about.py            # Ventana About/Acerca de
 ├── requirements.txt            # Dependencias Python
 ├── README.md                   # Este archivo
 └── img/
