@@ -39,6 +39,12 @@ Este programa es una herramienta de monitoreo de sistema que te ayuda a identifi
 - **Alertas del sistema**: Notificaciones cuando hay nuevos procesos en alerta
 - **Integración con bandeja**: Icono en la bandeja del sistema para acceso rápido
 
+### 📖 Sistema de Menús
+- **Menú Archivo**: 
+  - **Salir**: Cierra completamente la aplicación (incluye icono de bandeja)
+- **Menú Opciones**: 
+  - **About...**: Ventana informativa con detalles del proyecto y enlace al repositorio
+
 ## 🚀 Instalación y Uso
 
 ### Requisitos del Sistema
@@ -94,24 +100,38 @@ dbus-python    # Comunicación con D-Bus (Linux)
 
 ### Bandeja del Sistema
 - **Cerrar ventana**: La aplicación se minimiza a la bandeja del sistema
+- **Clic en icono de bandeja**: Restaura la ventana principal
 - **Clic derecho en icono**: Menú con opciones "Mostrar ventana" y "Salir"
 - **Menú Archivo > Salir**: Cierra completamente la aplicación
+
+### Ventana About
+- **Acceso**: Menú **Opciones > About...**
+- **Información del proyecto**: Versión, descripción y características
+- **Enlace al repositorio**: Acceso directo al código fuente en GitHub
+- **Diseño mejorado**: Interfaz clara con icono de la aplicación
 
 ## 🛠️ Estructura del Proyecto
 
 ```
 recursos/
-├── monitor_gui.py              # Aplicación principal
-├── run_app.py                  # Script de instalación y ejecución
+├── monitor_gui.py              # Aplicación principal con menús y lógica
+├── run_app.py                  # Script de instalación y ejecución automática
 ├── ventana_alertas.py          # Pestaña de procesos en alerta
 ├── ventana_todos_procesos.py   # Pestaña de todos los procesos
-├── ventana_about.py            # Ventana About/Acerca de
-├── requirements.txt            # Dependencias Python
+├── ventana_about.py            # Ventana About con info del proyecto
+├── requirements.txt            # Dependencias Python (incluye dbus-python)
 ├── README.md                   # Este archivo
 └── img/
-    ├── vitamina.png           # Icono de la aplicación
-    └── vitamina.ico           # Icono para Windows
+    ├── vitamina.png           # Icono de la aplicación (formato PNG)
+    └── vitamina.ico           # Icono para Windows (formato ICO)
 ```
+
+### Archivos Principales
+
+- **`monitor_gui.py`**: Archivo principal que contiene la lógica de monitoreo, interfaz principal, sistema de menús y integración con bandeja del sistema
+- **`ventana_about.py`**: Módulo separado para la ventana About, incluye enlace clickeable al repositorio de GitHub
+- **`run_app.py`**: Script automático que maneja entorno virtual, instalación de dependencias y ejecución
+- **`requirements.txt`**: Lista de dependencias incluyendo `dbus-python` para eliminar warnings en Linux
 
 ## 🔧 Configuración Avanzada
 
@@ -133,14 +153,38 @@ time.sleep(3)  # Cambia 3 por el número de segundos deseado
 ### El icono no aparece en la bandeja
 - **GNOME/Ubuntu**: Instala la extensión "AppIndicator Support"
 - **KDE**: Asegúrate de que el widget "System Tray" esté habilitado
+- **Funcionalidad mejorada**: El clic en el icono ahora restaura correctamente la ventana principal
 
 ### Warning de python-dbus
 ```bash
 sudo apt-get install python3-dbus
 ```
+**Nota**: Este problema está resuelto automáticamente ya que `dbus-python` está incluido en `requirements.txt`
 
 ### Permisos insuficientes
 Algunos procesos del sistema requieren permisos de administrador para ser gestionados.
+
+### La ventana About no muestra el enlace de GitHub
+- Verifica que el archivo `ventana_about.py` está presente
+- El enlace aparece en un frame etiquetado como "Código Fuente"
+- Si el problema persiste, revisa la consola para mensajes de debug
+
+## 📝 Historial de Versiones
+
+### Versión 0.1.2 (Actual)
+- ✅ **Mejorado**: Sistema de bandeja del sistema - ahora el clic restaura correctamente la ventana principal
+- ✅ **Añadido**: Sistema de menús con "Archivo > Salir" y "Opciones > About..."
+- ✅ **Añadido**: Ventana About completa con información del proyecto y enlace al repositorio
+- ✅ **Mejorado**: Modularización del código - ventana About en archivo separado
+- ✅ **Corregido**: Eliminado warning de D-Bus en Linux mediante inclusión de `dbus-python`
+- ✅ **Mejorado**: Interfaz de la ventana About con frame destacado para el enlace de GitHub
+- ✅ **Añadido**: Efectos hover y mejor visibilidad del enlace al repositorio
+
+### Versión 0.1.1
+- ✅ **Básico**: Funcionalidad de monitoreo de procesos
+- ✅ **Básico**: Umbrales configurables de CPU y memoria
+- ✅ **Básico**: Gestión de procesos (cerrar/pausar/reiniciar)
+- ✅ **Básico**: Integración básica con bandeja del sistema
 
 ## 📄 Licencia
 
@@ -150,13 +194,16 @@ Este proyecto es de código abierto. Siéntete libre de usarlo, modificarlo y di
 
 Las contribuciones son bienvenidas. Si encuentras bugs o tienes ideas para mejoras:
 
-1. Abre un **Issue** describiendo el problema o sugerencia
-2. Haz un **Fork** del repositorio
-3. Crea una **Pull Request** con tus cambios
+1. Visita el **repositorio en GitHub**: https://github.com/sapoclay/notificador-recursos/
+2. Abre un **Issue** describiendo el problema o sugerencia
+3. Haz un **Fork** del repositorio
+4. Crea una **Pull Request** con tus cambios
 
 ## 👨‍💻 Autor
 
-Creado con ❤️ para ayudar a identificar procesos problemáticos en el sistema.
+Creado con ☕ y 🚬 para optimizar tu sistema.
+
+**Repositorio**: https://github.com/sapoclay/notificador-recursos/
 
 ---
 
