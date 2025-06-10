@@ -303,7 +303,7 @@ Las contribuciones son bienvenidas. Si encuentras bugs o tienes ideas para mejor
 
 ## 👨‍💻 Autor
 
-Creado con ☕ y 🚬 para optimizar tu sistema.
+Creado por entreunosyceros con ☕ y 🚬 para optimizar tu sistema.
 
 **Repositorio**: https://github.com/sapoclay/notificador-recursos/
 
@@ -312,4 +312,4 @@ Creado con ☕ y 🚬 para optimizar tu sistema.
 ### 🚀 **Destacado en v0.1.2**: 
 **Sistema de Notificaciones Inteligentes** - Las notificaciones ahora incluyen información específica del proceso y permiten acción directa. Un simple clic en la notificación abre la aplicación, selecciona automáticamente el proceso problemático y te permite gestionarlo inmediatamente. ¡Sin búsquedas manuales!
 
-*"Cuando tu computadora va lenta, ¡encuentra quién se come los recursos!"* 🐸
+*"Cuando tu equipo va lent, ¡encuentra quién se come los recursos!"* 🐸
